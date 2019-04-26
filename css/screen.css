@@ -2,6 +2,25 @@
   #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: "ClearSans Web";
+    font-weight: 200;
+    src: url("../fonts/ClearSans-Light-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "ClearSans Web";
+    font-weight: 400;
+    src: url("../fonts/ClearSans-Medium-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "ClearSans Web";
+    font-weight: 600;
+    src: url("../fonts/ClearSans-Regular-webfont.woff") format("woff");
+}
+
+
 /*------------------------------------*\
   #GENERIC
 \*------------------------------------*/
@@ -13,12 +32,16 @@
 */
 
 html {
-    font-size: 16px;
-    line-height: 24px;
-    font-family: Helvetica, arial, sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    font-family: "ClearSans Web", Helvetica, arial, sans-serif;
+    font-weight: 200;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(to top right, #0A257D, #061649);
+    color: white;
+    background-attachment: fixed;
 }
 
 *,
@@ -175,6 +198,12 @@ a:focus {
 
 /* size modifiers */
 
+.o-row--gradient{
+    background: linear-gradient(to top right, #0A257D, #061649);
+    color: white;
+    background-attachment: fixed;
+}
+
 .o-row--lg {
     padding: 48px 24px 24px;
 }
@@ -205,7 +234,7 @@ a:focus {
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 56.4em; /* 56.4 * 20px = 1128px */
+    max-width: 71em; /* 71 * 18px = 1278px */
 }
 
 /*
@@ -366,6 +395,77 @@ a:focus {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
+.c-logo {
+    height: 32px;
+}
+
+.c-logo__symbol {
+    height: inherit;
+}
+
+
+.c-nav {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.c-nav__meta {
+    font-size: 16px;
+}
+
+.c-nav__link {
+    display: block;
+    text-decoration: none;
+    padding: 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+    color: white;
+}
+.c-nav__link__meta,
+.c-nav__link__meta:visited,
+.c-nav__link__meta:active {
+    color: #6C6C75;
+}
+
+
+.is-current .c-nav__link,
+.c-nav__link:hover,
+.c-nav__link:focus {
+    text-shadow: 0px 0px 5px white;
+    color: #DBEDFF;
+}
+
+@media (min-width: 768px) {
+    .c-nav__list {
+        display: flex;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .c-nav__link {
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .c-header__nav {
+        display: block;
+    }
+
+}
+
+
 
 /*------------------------------------*\
   #UTILITIES
